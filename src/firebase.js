@@ -11,13 +11,15 @@ const firebaseConfig = {
   projectId: "react-slack-83965",
   storageBucket: "react-slack-83965.appspot.com",
   messagingSenderId: "72681875926",
-  appId: "1:72681875926:web:c736ef09e4947ac3601c77",
-  measurementId: "G-JQY6JZ77FJ"
+  appId: "1:72681875926:web:664c8a71c26144bb601c77",
+  measurementId: "G-J1F0XP0CR4"
 };
-  // Use this to initialize the firebase App
-  const firebaseapp = firebase.initializeApp(firebaseConfig);
+   // Use this to initialize the firebase App
+   const firebaseapp = firebase.initializeApp(firebaseConfig);
 
-  // Use these for db, auth & provider
-  const db = firebaseapp.firestore();
-
-  export { db }
+   // Use these for db, auth & provider
+   const db = firebaseapp.firestore();
+   const auth = firebase.auth();
+   const provider = new firebase.auth.GoogleAuthProvider();
+ 
+   export { db, auth, provider }
